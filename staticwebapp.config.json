@@ -1,0 +1,18 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/404.html"]
+  },
+  "routes": [
+    {
+      "route": "/404",
+      "serve": "/404.html",
+      "statusCode": 404
+    },
+    {
+      "route": "/404.html",
+      "serve": "/404.html",
+      "statusCode": 404
+    }
+  ]
+}

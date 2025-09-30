@@ -23,8 +23,8 @@
       const blobName = Date.now() + "-" + file.name;
 
       // Replace with your actual SAS URL scoped to the 'photos' container
-      const sasUrl = "https://namestore123.blob.core.windows.net/?sv=2024-11-04&ss=b&srt=co&sp=rwlactfx&se=2025-10-04T00:09:47Z&st=2025-09-30T15:54:47Z&spr=https&sig=%2Fo%2BctJ8jvgusCHsxFv1lXC9o%2BtM%2B%2FISDpZlQYvT38fw%3D";
-
+      const sasToken = "?sp=racwl&st=2025-09-30T16:17:57Z&se=2025-10-01T00:32:57Z&spr=https&sv=2024-11-04&sr=c&sig=pd3QH%2BhVkeKuaoBF80cey30DfVpDWGI82ZcvrbDEr2U%3D";
+      const sasUrl = "https://namestore123.blob.core.windows.net/photos/" + blobName + sasToken;
       try {
         // Upload photo to Blob Storage
         await fetch(sasUrl, {
